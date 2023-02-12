@@ -6,7 +6,7 @@
 #    By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 13:41:07 by elel-yak          #+#    #+#              #
-#    Updated: 2023/02/12 19:16:45 by elel-yak         ###   ########.fr        #
+#    Updated: 2023/02/12 20:19:21 by elel-yak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,9 @@ NAME_C = client
 NAME_S_B = server_bonus
 NAME_C_B = client_bonus
 
-CC = gcc
+CC = cc
 FLAGS = -Wall -Werror -Wextra
+# FLAGS += -fsanitize=address
 RM = rm -rf
 
 HEADER = ./inc/minitalk.h

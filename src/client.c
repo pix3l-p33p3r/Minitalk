@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:41:07 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/02/12 13:30:42 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/02/12 20:12:20 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ static void	ft_infos(int sig, siginfo_t *siginfo, void *context)
 	exit(EXIT_FAILURE);
 }
 
-static void	ft_last_bit(int pid)
-{
-	int	i;
+// static void	ft_last_bit(int pid)
+// {
+// 	int	i;
 
-	i = 8;
-	while (i--)
-	{
-		if (kill(pid, SIGUSR2) == -1)
-			ft_putstr("\nError : Kill failed\n");
-		usleep(10);
-	}
-}
+// 	i = 8;
+// 	while (i--)
+// 	{
+// 		if (kill(pid, SIGUSR2) == -1)
+// 			ft_putstr("\nError : Kill failed\n");
+// 		usleep(10);
+// 	}
+// }
 
 static void	ft_error(void)
 {
@@ -45,8 +45,10 @@ static void	send_to_server(int pid, char *str)
 {
 	int		i;
 	char	c;
+	int		len;
 
-	while (*str)
+	len = ft_strlen(str) + 1;
+	while (len--)
 	{
 		i = 8;
 		c = *str++;
@@ -60,10 +62,9 @@ static void	send_to_server(int pid, char *str)
 			else
 				if (kill(pid, SIGUSR2) == -1)
 					ft_error();
-			usleep(50);
+			usleep(100);
 		}
 	}
-	ft_last_bit(pid);
 }
 
 int	main(int argc, char **argv)
