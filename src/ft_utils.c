@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:41:07 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/02/12 14:04:41 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/02/12 18:22:17 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,19 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-void	ft_putchar(char c)
+char	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }
 
-void	ft_putstr(char *str)
+char	ft_putstr(char *str)
 {
 	if (!str)
 		return (write(1, "(null)", 6));
 	return (write(1, str, ft_strlen(str)));
 }
 
-void	ft_putnbr(long n)
+int	ft_putnbr(long n)
 {
 	int	count;
 
