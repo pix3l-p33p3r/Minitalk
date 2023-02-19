@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:41:07 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/02/12 14:12:48 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:04:38 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int	main(void)
 {
 	struct sigaction	sa;
 
-	ft_putstr("Bonus part\n");
 	ft_putstr("Server is running !\n");
 	ft_putstr(" PID : ");
 	ft_putnbr(getpid());

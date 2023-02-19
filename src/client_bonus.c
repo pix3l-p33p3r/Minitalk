@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:41:07 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/02/12 13:30:03 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/02/18 15:33:35 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 3 || !ft_strlen(argv[2]))
 	{
-		ft_putstr("Arguments to run the program: ./client [pid] [string]\n");
+		ft_putstr("Arguments to run the program: ./client PID [MESSAGE]\n");
 		exit(EXIT_FAILURE);
 	}
 	ft_putstr("Client sent     : ");

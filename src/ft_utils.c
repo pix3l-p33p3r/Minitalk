@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:41:07 by elel-yak          #+#    #+#             */
-/*   Updated: 2023/02/12 18:22:17 by elel-yak         ###   ########.fr       */
+/*   Updated: 2023/02/18 16:37:28 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,20 +55,17 @@ int	ft_putnbr(long n)
 int	ft_atoi(const char *str)
 {
 	int			res;
-	int			sign;
 
-	sign = 1;
 	res = 0;
-	while (*str >= 7 && *str <= 14)
-		str++;
-	if (*str == '-')
-		sign = -1;
-	if (*str == '-' || *str == '+')
-		str++;
 	while (*str >= '0' && *str <= '9')
 	{
 		res = res * 10 + (*str - 48);
 		str++;
 	}
-	return (res * sign);
+	if (*str)
+	{
+		ft_putstr("Error : Invalid PID\n");
+		exit(EXIT_FAILURE);
+	}
+	return (res);
 }
