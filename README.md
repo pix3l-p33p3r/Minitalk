@@ -1,5 +1,5 @@
 <h1 align="center">
-    <b>fract'ol</b>
+    <b>Minitalk</b>
     <br>
     <img src="https://github.com/pix3l-p33p3r/Minitalk/blob/main/minitalkm.png" alt="fract'ol">
 </h1>
